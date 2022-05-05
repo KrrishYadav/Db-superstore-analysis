@@ -116,7 +116,8 @@ on p.Prod_id = m.Prod_id
 where p.Product_Sub_Category = 'tables' and d.Region = 'Atlantic'
 group by d.Customer_Name
 order by number_of_tables_purchased desc;
-
+						  
+#or
 
 select d.customer_name , d.region, sum(m.order_quantity) as no_of_tables_purchased
 from cust_dimen as d
